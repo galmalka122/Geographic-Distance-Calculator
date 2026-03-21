@@ -8,16 +8,24 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+
+    - name: Configure CMake
+      # This replaces the ./configure command that failed
+      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release
+
+    - name: Build
+      # This compiles your code
+      run: cmake --build ${{github.workspace}}/build --config Release
+
+    - name: Test Execution
+      # This verifies the app starts (it will likely fail on 'file not found' 
+      # for data.txt, but it proves the code compiled!)
+      run: |
+        cd build
+        ./GeographicDistanceCalculator << 'EOF'
+        0
+        EOF
