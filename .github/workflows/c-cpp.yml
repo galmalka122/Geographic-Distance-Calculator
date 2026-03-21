@@ -26,6 +26,6 @@ jobs:
       # for data.txt, but it proves the code compiled!)
       run: |
         cd build
-        ./GeographicDistanceCalculator << 'EOF'
+        ./Task06 << 'EOF'
         0
         EOF

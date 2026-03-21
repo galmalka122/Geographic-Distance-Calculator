@@ -19,3 +19,6 @@ add_executable (Task06)
 add_subdirectory (include)
 add_subdirectory (src)
 add_subdirectory (resources)
+
+file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/resources/data.txt"
+     DESTINATION "${CMAKE_CURRENT_BINARY_DIR}")

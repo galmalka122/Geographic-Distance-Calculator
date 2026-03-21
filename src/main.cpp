@@ -4,7 +4,7 @@
 
 int main()
 {
-	ifstream inputFile("data.txt");
+	ifstream inputFile("../resources/data.txt");
 	try
 	{
 		if (!inputFile)
