@@ -1,6 +1,6 @@
 # Geographic Distance Calculator
 
-A C++ project designed to manage a database of cities and calculate geographic distances between them using various mathematical metrics. [cite_start]The application allows users to search for cities within a specific radius of a given origin and provides details on their spatial relationship[cite: 8].
+A C++ project designed to manage a database of cities and calculate geographic distances between them using various mathematical metrics. The application allows users to search for cities within a specific radius of a given origin and provides details on their spatial relationship.
 
 ## Project Structure
 The project is organized into three main directories:
